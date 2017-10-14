@@ -1,0 +1,17 @@
+﻿@model ToDoGraphDemo.Models.ToDo
+
+@using (Html.BeginForm("New", "Todo", FormMethod.Post))
+{
+    <br />
+    <table>
+        <tr>
+            <td>@Html.LabelFor(m => m.Task)</td>
+            <td>@Html.TextBoxFor(m => m.Task)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Done)</td>
+            <td>@Html.CheckBoxFor(m => m.Done)</td>
+        </tr>
+    </table>
+    <input type="submit" value="Create" class="btn btn-default" />
+}
